@@ -1,4 +1,4 @@
-env: "local"  # dev prod
+env: "local"  # prod
 database:
   host: "localhost"
   port: "9920"

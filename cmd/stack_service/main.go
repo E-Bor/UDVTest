@@ -6,7 +6,6 @@ import (
 	"StackService/internal/http_server/handlers"
 	"StackService/internal/services"
 	"StackService/internal/storage/postgresql"
-	"fmt"
 	"log/slog"
 	"net/http"
 	"os"
@@ -14,14 +13,11 @@ import (
 
 const (
 	envLocal = "local"
-	envDev   = "dev"
 	envProd  = "prod"
 )
 
 func main() {
 	cfg := config.MustLoad()
-	fmt.Println(cfg)
-
 	logger := initLogger(cfg.Env)
 	logger.Info("starting service")
 
