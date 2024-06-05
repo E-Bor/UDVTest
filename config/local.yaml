@@ -1,0 +1,11 @@
+env: "local"  # dev prod
+database:
+  host: "localhost"
+  port: "9920"
+  user: "postgres"
+  dbname: "postgres"
+http_server:
+  address: "localhost:8082"
+  timeout: 5s
+  idle_timeout: 60s
+
