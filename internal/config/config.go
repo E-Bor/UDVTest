@@ -28,10 +28,8 @@ type Database struct {
 }
 
 func MustLoad() *Config {
-	//configPath := os.Getenv("CONFIG_PATH")  // debug without envs
-	//dbPass := os.Getenv("POSTGRES_PASSWORD")	// debug without envs
-	dbPass := "123456"
-	configPath := "./config/local.yaml"
+	configPath := os.Getenv("CONFIG_PATH")
+	dbPass := os.Getenv("POSTGRES_PASSWORD")
 
 	if configPath == "" {
 		log.Fatal("CONFIG_PATH environment variable not set")
